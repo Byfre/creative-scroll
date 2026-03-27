@@ -9,17 +9,17 @@ if (ScrollTrigger.isTouch !== 1) {
     effects: true,
   })
 
-  gsap.fromTo('.hero-section', { opacity: 1 }, {
+  gsap.fromTo('.hero', { opacity: 1 }, {
     opacity: 0,
     scrollTrigger: {
-      trigger: '.hero-section',
+      trigger: '.hero',
       start: 'center',
       end: '1500',
       scrub: true
     }
   })
 
-  let itemsL = gsap.utils.toArray('.gallery__left .gallery__item')
+  let itemsL = gsap.utils.toArray('.gallery__column--left .gallery__item')
 
   itemsL.forEach(item => {
     gsap.fromTo(item, { x: -100, opacity: 0 }, {
@@ -34,7 +34,7 @@ if (ScrollTrigger.isTouch !== 1) {
     })
   });
 
-  let itemsR = gsap.utils.toArray('.gallery__right .gallery__item')
+  let itemsR = gsap.utils.toArray('.gallery__column--right .gallery__item')
 
   itemsR.forEach(item => {
     gsap.fromTo(item, { x: 100, opacity: 0 }, {

@@ -40,8 +40,8 @@ h6 {
  * чтобы не перегружать память браузера.
  */
 .content,
-.hero,
-.main-header,
+.hero__image,
+.hero__header,
 .gallery > * {
   will-change: transform;
 }
@@ -54,7 +54,7 @@ body {
   overflow-x: hidden;
 }
 
-.hero {
+.hero__image {
   position: absolute;
   left: 37vw;
   top: 8vh;
@@ -62,7 +62,7 @@ body {
   width: calc(var(--index) * 36);
 }
 
-.main-header {
+.hero__header {
   height: 100vh;
 }
 
@@ -70,7 +70,7 @@ body {
   padding: 0 7vh;
 }
 
-.main-title {
+.hero__title {
   position: absolute;
   bottom: 12vh;
   width: min-content;
@@ -99,11 +99,11 @@ body {
   width: 100%;
 }
 
-.gallery__left {
+.gallery__column--left {
   margin-top: calc(var(--gallery-gap) * 1.75);
 }
 
-.gallery__right .gallery__item {
+.gallery__column--right .gallery__item {
   margin: 0;
   margin-top: var(--gallery-gap);
 }
@@ -113,14 +113,14 @@ body {
   position: relative;
 }
 
-.text-block__h {
+.text-block__heading {
   font-size: 2rem;
   line-height: 2.4rem;
   color: var(--color-header);
   margin-bottom: 1.5rem;
 }
 
-.text-block__p {
+.text-block__paragraph {
   line-height: 1.75rem;
   font-size: 1.5rem;
 }
